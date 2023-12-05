@@ -34,6 +34,9 @@ export function addUserHandler() {
       });
     }
   }
+  nameField.value = '';
+  emailField.value = '';
+  ageField.value = '';
 }
 
 function removeUserHandler(event) {
@@ -73,7 +76,7 @@ export function loadHandler() {
   currentUses.forEach((user) => {
     showUser(user.id, user.username, user.email, user.age);
 
-    const userDiv = document.getElementById(user.id); // Fix: Changed 'userId' to 'user.id'
+    const userDiv = document.getElementById(user.id);
     const removeBtn = userDiv.querySelector('button');
 
     if (removeBtn) {
